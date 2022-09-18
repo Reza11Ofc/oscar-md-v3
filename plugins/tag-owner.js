@@ -12,7 +12,7 @@ await conn.send2ButtonImg(m.chat, jarot, "*BIMLEK🐦*", 'ngapain banh tag” di
 
 }
 
-handler.customPrefix = '/@+62 896-0679-0112/i
+handler.customPrefix = '/@6289606790112/i
 
 handler.command = new RegExp
 
