@@ -189,7 +189,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                             }, {
                               urlButton: {
                                     displayText: '𝙔𝙤𝙪𝙏𝙪𝙗𝙚 📺',
-                                    url: 'https://youtube.com/channel/UCW7iXlE7TgvJMIXQck4NYBQ'
+                                    url: 'https://youtube.com/channel/UCoUIE95oCiyo_Ps0l9rhcdw'
                                 }
                             }, {
                                 quickReplyButton: {
