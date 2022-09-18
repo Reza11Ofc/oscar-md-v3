@@ -35,34 +35,26 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-┏─────────────────⬣
-┆ 𝑯𝒂𝒊, %ucapan %name!👋
-┗┬──────────────┈ ⳹
-┏┆⬡ *Limit:* : %limit
-┆┆⬡ *Level:* : %level
-┆┆⬡ *XP:* : %exp
-┗┬──────────────┈ ⳹
-┏┤   *𝐊𝐚𝐥𝐞𝐧𝐝𝐞𝐫*
-┆┗──────────────┈ ⳹
-┆⬡ *Hari:* : %week
-┆⬡ *Tanggal:* : %date
-┆⬡ *Waktu Wib* : %wib 
-┆⬡ *Waktu Wita* : %wita 
-┆⬡ *Waktu Wit* : %wit 
-┗┬──────────────┈ ⳹
-┏┤ *𝐁𝐨𝐭 𝐈𝐧𝐟𝐨*
-┆┗──────────────┈ ⳹
-┆⬡ *Limit* : Ⓛ 
-┆⬡ *Premium* : Ⓟ
-┆⬡ *Uptime:* : %uptime (%muptime)
-┆⬡ *Run Bot* : Okteto/heroku
-┆⬡ *Gc Owner* : https://bit.ly/3dEn6vF
-┗─────────────────⬣
+Hai, %ucapan %name! 👋
+  
+*Waktu:* 
+%wib WIB
+%wita WITA
+%wit WIT
+*Hari:* %week
+*Tanggal:* %date
+*Uptime:* %uptime (%muptime)
+
+*Limit:* %limit
+*Level:* %level
+*XP:* %exp
 %readmore`.trimStart(),
-  header: '╭─❑ 〔 %category 〕 ❑─\n┃',
-  body: '┃❑ %cmd %islimit %isPremium',
-  footer: '┃\n╰────────❑\n', 
-  after: `*Made by ♡*
+  header: ' *%category*',
+  body: ' • %cmd %islimit %isPremium',
+  footer: '\n',
+  after: `*EzaBot-MD by*
+*RezaOfc* | %version
+${'```%npmdesc```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
@@ -165,12 +157,13 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    /*conn.sendHydrated(m.chat, `${global.anu}`, text.trim(), 'Ⓟ premium | Ⓛ limit', null, 'https://youtube.com/channel/UCW7iXlE7TgvJMIXQck4NYBQ', 'Website🌟', '', '', [
-      ['Donate🌟', '/donasi'],
-      ['Sewa Bot🌟', '/sewa'],
-      ['Owner🌟', '/owner']
+    conn.sendButton(m.chat, text.trim(), 'EzaBot-MD by RezaOfc', null, [['Donasi', '.donasi'],['Owner', '.owner']], m)
+    /*conn.sendHydrated(m.chat, text.trim(), 'Ⓟ premium | Ⓛ limit', null, 'https://Github.com/RezaOfc', 'Github', '', '', [
+      ['Donate', '/donasi'],
+      ['Sewa Bot', '/sewa'],
+      ['Owner', '/owner']
     ], m)*/
-    let url = `https://telegra.ph/file/054b6fe59958df5ad6b1f.jpg`.trim()
+    /*let url = `https://telegra.ph/file/b22ded093f0afe6cf10da.jpg`.trim()
     let res = await fetch(url)
     let buffer = await res.buffer()
     let message = await prepareWAMessageMedia({ image: buffer }, { upload: conn.waUploadToServer })
@@ -179,46 +172,40 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                         hydratedTemplate: {
                             imageMessage: message.imageMessage,
                             hydratedContentText: text.trim(),
-                            hydratedFooterText:'                『 RezaOfc 』',
+                            hydratedFooterText:'Ⓟ premium | Ⓛ limit',
                             hydratedButtons: [{
-                              urlButton: {
-                                    displayText: '𝙂𝙧𝙤𝙪𝙥 🌏',
-                                    url: 'https://chat.whatsapp.com/IqZke0cAG6G3iVsnB9myfL'
-                                }
-                                
-                            }, {
-                              urlButton: {
-                                    displayText: '𝙔𝙤𝙪𝙏𝙪𝙗𝙚 📺',
-                                    url: 'https://youtube.com/channel/UCoUIE95oCiyo_Ps0l9rhcdw'
+                                urlButton: {
+                                    displayText: 'Github',
+                                    url: 'https://Github.com/RezaOfc'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '𝘿𝙤𝙣𝙖𝙨𝙞 🔄',
+                                    displayText: 'Donasi',
                                     id: '/donasi'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '𝙎𝙚𝙬𝙖 🏧',
+                                    displayText: 'Sewa',
                                     id: '/sewa'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: '𝙊𝙬𝙣𝙚𝙧 🌟',
+                                    displayText: 'Owner',
                                     id: '/owner'
                                 }
                             }]
                         }
                     }
                 }), { userJid: m.chat, quoted: m })
-                conn.relayMessage(m.chat, template.message, { messageId: template.key.id })
+                conn.relayMessage(m.chat, template.message, { messageId: template.key.id })*/
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
   }
 }
-handler.help = ['allmenu']
+handler.help = ['menu']
 handler.tags = ['main']
-handler.command = /^(allmenu|help|\?)$/i
+handler.command = /^(menu|help|\?)$/i
 
 handler.exp = 3
 
