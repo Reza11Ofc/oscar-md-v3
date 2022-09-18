@@ -9,7 +9,7 @@ let handler = async (m, { conn }) => conn.send2ButtonLoc(m.chat, await (await fe
 ║          ❉ 〔 *𝗗𝗢𝗡𝗔𝗦𝗜* 〕 ❉
 ║➸ *DANA* : 
 ║➸ _081515696780_
-║➸ *PULSA
+║➸ *PULSA*
 ║➸ _089606790112_
 ║➸ *Gopay*:
 ║➸ _081515696780_
