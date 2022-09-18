@@ -8,7 +8,7 @@ let handler  = async (m, { conn, text }) => {
 
   for (let id of chats) {
 
-       let bcbg = 'https://telegra.ph/file/c6d47e0aa9dca2263bee9.png'
+       let bcbg = 'https://telegra.ph/file/7fa278a80621cf61394d1.jpg'
 
        await conn.delay(1500)
 
