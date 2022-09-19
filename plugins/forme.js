@@ -7,7 +7,7 @@ conn.sendMessage(m.chat, {
     index: 1,
     urlButton: {
       displayText: `For you ♡`,
-      url: 'https://youtube.com/channel/UCW7iXlE7TgvJMIXQck4NYBQ'
+      url: 'https://RezaOfc.akunbrazil3.repl.co'
     }
   }],
   footer: 'For You ❤️'
