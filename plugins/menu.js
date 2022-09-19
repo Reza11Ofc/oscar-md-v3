@@ -59,11 +59,10 @@ const defaultMenu = {
 ┆⬡ *Run Bot* : Okteto/heroku
 ┆⬡ *Gc bot* : https://bit.ly/3dEn6vF
 ┗───────────────┈ ⬣
-  *┏───────────────┈❋ཻུ۪۪⸙*
-  *┆ _Nyari menunya?_*
-  *┆ _Pencet baca selengkapnya_*
-  *┆ _untuk lihat menunya deck_*
-  *┗───────────────┈❋ཻུ۪۪⸙*
+  *┏──────────────┈⳹❋ཻུ۪۪*
+  *┆ _⸙ Official By WhatsApp_*
+  *┆ _⸙ Powered By RezaOfc_*
+  *┗──────────────┈⳹❋ཻུ۪۪*
 %readmore`.trimStart(),
   header: ' *%category*',
   body: ' • %cmd %islimit %isPremium',
