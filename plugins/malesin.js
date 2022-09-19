@@ -14,7 +14,7 @@ conn.sendMessage(m.chat, {
 })
 }, 15000)
 setTimeout(() => {
-conn.reply(m.chat, 'Janji jangan marah sama Jarot iya.. 😕', m)
+conn.reply(m.chat, 'Janji jangan marah sama Reza ya.. 😕', m)
 }, 10000)
 setTimeout(() => {
 conn.reply(m.chat, 'Tapi kamu jangan marah iya.. 🥺', m)
