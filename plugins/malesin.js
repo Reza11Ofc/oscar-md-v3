@@ -7,7 +7,7 @@ conn.sendMessage(m.chat, {
     index: 1,
     urlButton: {
       displayText: `Maafin aku ♡`,
-      url: 'https://youtube.com/channel/UCW7iXlE7TgvJMIXQck4NYBQ'
+      url: 'https://alo.likeadream.repl.co/'
     }
   }],
   footer: 'Ututu cayangnya aku 😍'
