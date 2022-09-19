@@ -7,14 +7,10 @@ let handler = async (m, { conn }) => conn.sendButtonLoc(m.chat, 'https://telegra
 
 ◪ 📮 *SCRIPT BOT*
 │ *Script :* 
-│ ╰ https://youtu.be/FHntJPk2PkU
-│ *Mampir Youtube Owner Banh:* 
-│ ╰ https://tinyurl.com/2qsejxnw
+│ gk ada
 ╰──────────═┅═──────────
 `,`📍 *N o t e :* 
-• Jangan lupa mampir Youtube Owner Kak!
-• Jangan Lupa kasih star & kasih credit
-
+• 
 Official By @${'0'.split('@')[0]}
 Powered By @${`${global.owner[0]}`.split('@')[0]}`, 'Pemilik Bot', '#owner')
 handler.help = ['sourcecode']
