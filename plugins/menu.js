@@ -35,19 +35,35 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-Hai, %ucapan %name! 👋
-  
-*Waktu:* 
-%wib WIB
-%wita WITA
-%wit WIT
-*Hari:* %week
-*Tanggal:* %date
-*Uptime:* %uptime (%muptime)
-
-*Limit:* %limit
-*Level:* %level
-*XP:* %exp
+┏─────────────────⬣
+┆ 𝑯𝒂𝒊 %name!👋,
+┆ %ucapan, jgn lupa mkn ya.. 
+┗┬──────────────┈ ⳹
+┏┆⬡ *Limit:* : %limit
+┆┆⬡ *Level:* : %level
+┆┆⬡ *XP:* : %exp
+┗┬──────────────┈ ⳹
+┏┤   *𝐊𝐚𝐥𝐞𝐧𝐝𝐞𝐫*
+┆┗──────────────┈ ⳹
+┆⬡ *Hari:* : %week
+┆⬡ *Tanggal:* : %date
+┆⬡ *Waktu Wib* : %wib 
+┆⬡ *Waktu Wita* : %wita 
+┆⬡ *Waktu Wit* : %wit 
+┗┬──────────────┈ ⳹
+┏┤ *𝐁𝐨𝐭 𝐈𝐧𝐟𝐨*
+┆┗──────────────┈ ⳹
+┆⬡ *Limit* : Ⓛ 
+┆⬡ *Premium* : Ⓟ
+┆⬡ *Uptime:* : %uptime (%muptime)
+┆⬡ *Run Bot* : Okteto/heroku
+┆⬡ *Gc bot* : https://bit.ly/3dEn6vF
+┗───────────────┈ ⬣
+  *┏───────────────┈❋ཻུ۪۪⸙*
+  *┆ _Nyari menunya?_*
+  *┆ _Pencet baca selengkapnya_*
+  *┆ _untuk lihat menunya deck_*
+  *┗───────────────┈❋ཻུ۪۪⸙*
 %readmore`.trimStart(),
   header: ' *%category*',
   body: ' • %cmd %islimit %isPremium',
