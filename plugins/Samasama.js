@@ -4,7 +4,7 @@ let helloaine = fs.readFileSync('mp3/WhatsApp-Ptt-2021-03-10-at-20.35.07.opus')
 conn.sendFile(m.chat, helloaine, '', '', m, true)
 }
 
-handler.customPrefix = /^(makasi|makasih|makaci|tq|ty|tyy|ok tq)$/i
+handler.customPrefix = /^(makasi|makasih|makaci|makacih|tq|ty|tyy|ok tq)$/i
 handler.command = new RegExp
 
 handler.limit = true
